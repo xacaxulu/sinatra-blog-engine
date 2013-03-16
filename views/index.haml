@@ -1,0 +1,12 @@
+.container
+  .span7
+    .hero-unit
+      %h3 Stuff I've written about gSchool
+      - Dir.glob("./views/*.markdown").reverse[0..10].each do |f|
+        %p <a href="#{f}"}</a>#{f.gsub("./views/",'').gsub(".html.markdown",'')}
+  .span4
+    .hero-unit
+      :plain 
+          <a class="twitter-timeline"  href="https://twitter.com/XacaXulu" data-widget-id="298194523106975744">Tweets by @XacaXulu</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
