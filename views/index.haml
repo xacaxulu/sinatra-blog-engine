@@ -2,7 +2,7 @@
   .span7
     .hero-unit
       %h3 Stuff I've written about gSchool
-      - Dir.glob("./views/*.markdown").sort_by {|file| puts file.scan(/0-9/) }.reverse.each do |f|
+      - Dir.glob("./views/*.markdown").sort_by {|file| Date.new(file.scan(/([0-9]*-*)/).join.gsub('-',',').to_i)}.reverse.each do |f|
         %p <a href="#{f}"}</a>#{f.gsub("./views/",'').gsub(".html.markdown",'')}
   .span4
     .hero-unit
