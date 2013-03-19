@@ -1,7 +1,4 @@
-
-class Post
-  attr_accessor :title, :link, :date
-end
+require "./lib/models/post"
 
 get '/' do
   @posts = Dir.glob("./views/*.markdown").collect do |file|
